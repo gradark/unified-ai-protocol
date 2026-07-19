@@ -11,8 +11,11 @@ CLI, Windsurf, …) can be wired in minutes with the
 
 - **PRIME** — every natural-language prompt is restructured into a technical
   spec (intent / scope / constraints / success criteria) before the AI acts.
-  Kills vague-prompt hallucination; the AI echoes its ≤3-line interpretation
-  so misreads surface immediately, then proceeds without blocking.
+  Kills vague-prompt hallucination. The enhancement is always displayed as a
+  plain-text `[PRIME]` block at the top of the response — including a
+  mandatory `assumed:` line listing everything the AI added or reinterpreted
+  beyond your literal words — so misreads surface immediately in any surface
+  (terminal, CLI, IDE), then it proceeds without blocking.
 - **ROUTE** — tasks are classified T1–T4 and matched to the right model tier,
   reasoning effort, and agent strategy. Big tasks fan out to parallel
   subagents; related edits are batched before reporting.

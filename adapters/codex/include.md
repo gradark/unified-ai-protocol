@@ -7,8 +7,18 @@ the unified-ai-protocol repo.
 
 Restructure every natural-language request before acting:
 intent / scope / constraints / success criteria.
-Echo the spec in ≤3 lines at the top of the first response, then proceed
-immediately. Ask first ONLY if 2+ materially different interpretations exist.
+Display the enhancement at the top of the first response as plain text
+(renders in terminal, CLI, and IDE alike):
+
+```
+[PRIME] intent: … | scope: … | success: …
+[PRIME] assumed: …
+```
+
+`assumed:` is mandatory whenever enhancement added or reinterpreted anything
+beyond the user's literal words — the user must see what changed. Write
+`assumed: none` if taken verbatim. Then proceed immediately. Ask first ONLY
+if 2+ materially different interpretations exist.
 
 ## ROUTE — agents, models, effort
 

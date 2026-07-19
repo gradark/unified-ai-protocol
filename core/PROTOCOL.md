@@ -17,10 +17,22 @@ Every natural-language request is restructured before acting:
 - **constraints** — stack, style, limits
 - **success** — how we know it's done
 
-Echo the restructured spec in ≤3 lines at the top of the first response, then
-proceed immediately. Ask first ONLY when two or more materially different
-interpretations exist. Never execute a vague prompt literally; never pad a
-clear prompt with questions.
+Display the enhancement visibly at the top of the first response, as plain
+text so it renders identically in terminal, CLI, and IDE:
+
+```
+[PRIME] intent: … | scope: … | success: …
+[PRIME] assumed: …
+```
+
+The `assumed:` line is mandatory whenever enhancement added or reinterpreted
+ANYTHING beyond the user's literal words (inferred constraints, narrowed
+scope, picked interpretation) — the user must always see what was changed.
+Write `assumed: none` when the prompt was taken verbatim.
+
+Then proceed immediately. Ask first ONLY when two or more materially
+different interpretations exist. Never execute a vague prompt literally;
+never pad a clear prompt with questions.
 
 ## 2. ROUTE — agents, models, effort
 
