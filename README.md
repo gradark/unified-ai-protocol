@@ -34,7 +34,7 @@ The full spec lives in [core/PROTOCOL.md](core/PROTOCOL.md).
 Requires Node.js (you already have it if you run Claude Code).
 
 ```
-git clone https://github.com/YOUR_USER/unified-ai-protocol
+git clone https://github.com/gradark/unified-ai-protocol
 cd unified-ai-protocol
 node scripts/install.js
 ```
