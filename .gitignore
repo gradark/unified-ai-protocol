@@ -1,0 +1,3 @@
+node_modules/
+*.uap-bak
+.DS_Store
