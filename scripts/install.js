@@ -57,7 +57,7 @@ if (fs.existsSync(claudeDir)) {
 
   const hooksDir = path.join(claudeDir, 'hooks');
   fs.mkdirSync(hooksDir, { recursive: true });
-  const hookFiles = ['uap-session-start.js', 'uap-stop.js'];
+  const hookFiles = ['uap-session-start.js', 'uap-stop.js', 'uap-prompt.js'];
   for (const h of hookFiles) {
     const dest = path.join(hooksDir, h);
     if (UNINSTALL) {
@@ -87,6 +87,7 @@ if (fs.existsSync(claudeDir)) {
   };
   wire('SessionStart', 'uap-session-start.js');
   wire('Stop', 'uap-stop.js');
+  wire('UserPromptSubmit', 'uap-prompt.js');
   if (!Object.keys(settings.hooks).length) delete settings.hooks;
   fs.writeFileSync(settingsFile, JSON.stringify(settings, null, 2) + '\n');
   console.log(
